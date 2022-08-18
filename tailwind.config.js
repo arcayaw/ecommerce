@@ -12,11 +12,16 @@ module.exports = {
         14: '14px',
       },
       backgroundColor: {
-        'main-bg': '#FAFBFB',
-        'main-dark-bg': '#20232A',
-        'secondary-dark-bg': '#33373E',
+        'main-bg': '#FBEEEC',
+        'main-dark-bg': '#AA7680',
+        'secondary-dark-bg': '#D6B0B0',
         'light-gray': '#F7F7F7',
         'half-transparent': 'rgba(0, 0, 0, 0.5)',
+      },
+      colors: {
+        'mainColor': '#FBEEEC',
+        'secondaryColor': '#AA7680',
+        'tercearyColor': '#D6B0B0',
       },
       borderWidth: {
         1: '1px',
