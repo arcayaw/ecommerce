@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ecommerce/static/css/main.e5e7734e.css",
+    "main.js": "/ecommerce/static/js/main.2a446f1d.js",
+    "static/media/boxMama.jpg": "/ecommerce/static/media/boxMama.8dd32a1b368669ef3990.jpg",
+    "static/media/logo.png": "/ecommerce/static/media/logo.bc4933f3bd389cefcfd1.png",
+    "index.html": "/ecommerce/index.html",
+    "main.e5e7734e.css.map": "/ecommerce/static/css/main.e5e7734e.css.map",
+    "main.2a446f1d.js.map": "/ecommerce/static/js/main.2a446f1d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5e7734e.css",
+    "static/js/main.2a446f1d.js"
+  ]
+}
