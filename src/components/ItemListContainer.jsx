@@ -9,11 +9,13 @@ const ItemListContainer = () => {
   }
 
   return (
-    <div>
-      <p className='mt-3 text-center'>Este es el Item List Container</p>
+    <div className=''>
+      <p className='mt-3 text-center '>Este es el Item List Container</p>
       <ItemCount stock={6} initial={1} addItem={onAdd} />
     </div>
   )
 }
 
 export default ItemListContainer
+
+
