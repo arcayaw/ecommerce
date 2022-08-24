@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ecommerce/static/css/main.e5e7734e.css",
-    "main.js": "/ecommerce/static/js/main.2a446f1d.js",
+    "main.css": "/ecommerce/static/css/main.a11feff0.css",
+    "main.js": "/ecommerce/static/js/main.bd4c40b2.js",
     "static/media/boxMama.jpg": "/ecommerce/static/media/boxMama.8dd32a1b368669ef3990.jpg",
     "static/media/logo.png": "/ecommerce/static/media/logo.bc4933f3bd389cefcfd1.png",
     "index.html": "/ecommerce/index.html",
-    "main.e5e7734e.css.map": "/ecommerce/static/css/main.e5e7734e.css.map",
-    "main.2a446f1d.js.map": "/ecommerce/static/js/main.2a446f1d.js.map"
+    "main.a11feff0.css.map": "/ecommerce/static/css/main.a11feff0.css.map",
+    "main.bd4c40b2.js.map": "/ecommerce/static/js/main.bd4c40b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5e7734e.css",
-    "static/js/main.2a446f1d.js"
+    "static/css/main.a11feff0.css",
+    "static/js/main.bd4c40b2.js"
   ]
 }
