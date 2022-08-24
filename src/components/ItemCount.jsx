@@ -35,9 +35,6 @@ export default function ItemCount({ stock, initial, addItem }) {
   return (
 
     <div className='text-center '>
-      <div className='flex items-center justify-center'>
-        <img src={boxMama} className="mt-5" alt="" style={{ width: "300px", height: '400px' }} />
-      </div>
       <div>
         <p className='mt-5'>Cantidad</p>
       </div>
