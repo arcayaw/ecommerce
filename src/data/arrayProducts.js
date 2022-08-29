@@ -1,12 +1,14 @@
-const arrayProducts = [
+import helena from "../data/images/nunchi-Helena-min.jpg"
+
+const products = [
   {
     id: 1,
     title: "Box Kids",
     stock: 2,
     price: 4500,
-    description: "Regala relax a esa persona que tanto quieres.",
-    // // imageUrl: "https://ibb.co/4dJ8pKh",
-    // image: "/image/nunchi-Helena-min.jpg",
+    description: "Pensada para las pequeñas de la casa, ellas que siempre sueñan y blablablablablabla blablablab blablablab blablablabblablablabblablablab blablablab  blablablab  blablablabblablablab",
+    imageUrl: "https://ibb.co/4dJ8pKh",
+    image: [helena],
     image1: "https://via.placeholder.com/150",
     contiene: "jugo Natural, galletas, donuts, alfajores",
     imageDescription: "Box Donuts",
@@ -19,8 +21,8 @@ const arrayProducts = [
     stock: 2,
     price: 3500,
     description: "Regala relax a esa persona que tanto quieres.",
-    // imageURL: "https://ibb.co/HPqpxX8",
-    // image: "/image/nunchi-Rose-min.jpg",
+    imageURL: "https://ibb.co/HPqpxX8",
+    image: "/image/nunchi-Rose-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "botella de vino, chocolates, copas",
     imageDescription: "rose bottle",
@@ -33,8 +35,8 @@ const arrayProducts = [
     stock: 2,
     price: 4500,
     description: "Regala relax a esa persona que tanto quieres.",
-    // imageURL: "https://ibb.co/NnfZcZ3",
-    // image: "/image/nunchi-CAI-min-min.jpg",
+    imageURL: "https://ibb.co/NnfZcZ3",
+    image: "/image/nunchi-CAI-min-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "cerveza, jugo, picada",
     imageDescription: "Desayuno CAI",
@@ -47,8 +49,8 @@ const arrayProducts = [
     stock: 5,
     price: 6500,
     description: "Regala relax a esa persona que tanto quieres.",
-    // imageURL: "https://ibb.co/fDwk9Zz",
-    // image: "/image/nunchi-GinBox-min.jpg",
+    imageURL: "https://ibb.co/fDwk9Zz",
+    image: "/image/nunchi-GinBox-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "botella de Gin, elementos para tragos",
     imageDescription: "gin bottle",
@@ -61,8 +63,8 @@ const arrayProducts = [
     stock: 5,
     price: 4500,
     description: "Regala relax a esa persona que tanto quieres.",
-    // imageURL: "https://ibb.co/pbzvHKf",
-    // image: "/image/nunchi-astronauta-min.jpg",
+    imageURL: "https://ibb.co/pbzvHKf",
+    image: "/image/nunchi-astronauta-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "jugo Natural, galletas, donuts, alfajores",
     imageDescription: "Box astronauta",
@@ -75,8 +77,8 @@ const arrayProducts = [
     stock: 5,
     price: 4000,
     description: "Regala relax a esa persona que tanto quieres.",
-    // imageURL: "https://ibb.co/WPwtBK5",
-    // image: "/image/nunchi-Kiwi-min.jpg",
+    imageURL: "https://ibb.co/WPwtBK5",
+    image: "/image/nunchi-Kiwi-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "jugo Natural, yogurt, sandiwhc, frutas",
     imageDescription: "Desayuno frutal",
@@ -89,8 +91,8 @@ const arrayProducts = [
     stock: 5,
     price: 4200,
     description: "Regala algo, lo que sea, vos fijate",
-    // imageURL: "https://ibb.co/XjWGqCQ",
-    // image: "/image/nunchi-MediaLuns-min.jpg",
+    imageURL: "https://ibb.co/XjWGqCQ",
+    image: "/image/nunchi-MediaLuns-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "medialunas, jugo natural, alfajores",
     imageDescription: "Desayuno Argentino",
@@ -103,8 +105,8 @@ const arrayProducts = [
     stock: 5,
     price: 6500,
     description: "Regala relax a esa persona que tanto quieres.",
-    // imageURL: "https://ibb.co/n3St7jP",
-    // image: "/image/nunchi-botella-min.jpg",
+    imageURL: "https://ibb.co/n3St7jP",
+    image: "/image/nunchi-botella-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "botella de vino, chocolates, copas",
     imageDescription: "wine and chocolate",
@@ -117,8 +119,8 @@ const arrayProducts = [
     stock: 5,
     price: 4500,
     description: "Regala relax a esa persona que tanto quieres.",
-    // imageURL: "https://ibb.co/gg4d2rb",
-    // image: "/image/nunchi-Trooper-min.jpg",
+    imageURL: "https://ibb.co/gg4d2rb",
+    image: "/image/nunchi-Trooper-min.jpg",
     image1: "https://via.placeholder.com/150",
     contiene: "cafe, galletas, chcolate, taza personalizada",
     imageDescription: "Coffe and cookies",
@@ -126,8 +128,15 @@ const arrayProducts = [
     categoryName: "Desayunos",
   },
 ];
+const getFetch = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(products)
+    reject(err => console.log(err))
 
-export default arrayProducts
+  }, 2000);
+})
+
+export default getFetch
 
 /* imagenes */
 

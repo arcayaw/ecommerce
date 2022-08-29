@@ -44,7 +44,7 @@ export default function ItemCount({ stock, initial, addItem }) {
         <button className='mx-3 text-secondaryColor' onClick={resta}><AiFillMinusCircle /></button>
       </div>
       <div>
-        <button className='p-2 px-4 py-2 mt-2 text-white rounded-full bg-secondary-dark-bg hover:bg-blue-700' onClick={() => (addItem(counter))}>Agregar al carrito</button>
+        <button className='p-2 px-4 py-2 mt-2 text-white rounded-full bg-secondary-dark-bg hover:bg-pink-700' onClick={() => (addItem(counter))}>Agregar al carrito</button>
       </div>
 
     </div>
