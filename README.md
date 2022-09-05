@@ -7,7 +7,7 @@ Ecommerce de venta de regalos personalizados usando React JS y Tailwindcss
 Ver [DEMO](https://arcayaw.github.io/ecommerce/) de la app
 
 # Navegación
-![gif](https://github.com/camilapardini/CocaColaWorld/blob/master/src/Ecommerce.gif) 
+TBD
 
 # Instrucciones para usar la aplicación de manera local
 
