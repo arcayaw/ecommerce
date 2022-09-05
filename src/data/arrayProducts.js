@@ -13,7 +13,7 @@ const products = [
     contiene: "jugo Natural, galletas, donuts, alfajores",
     imageDescription: "Box Donuts",
     category_id: 1,
-    categoryName: "Kids",
+    category: "Kids",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const products = [
     contiene: "botella de vino, chocolates, copas",
     imageDescription: "rose bottle",
     category_id: 2,
-    categoryName: "Bebidas",
+    category: "Bebidas",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const products = [
     contiene: "cerveza, jugo, picada",
     imageDescription: "Desayuno CAI",
     category_id: 3,
-    categoryName: "Desayunos",
+    category: "Desayunos",
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const products = [
     contiene: "botella de Gin, elementos para tragos",
     imageDescription: "gin bottle",
     category_id: 2,
-    categoryName: "Bebidas",
+    category: "Bebidas",
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ const products = [
     contiene: "jugo Natural, galletas, donuts, alfajores",
     imageDescription: "Box astronauta",
     category_id: 1,
-    categoryName: "Kids",
+    category: "Kids",
   },
   {
     id: 6,
@@ -83,7 +83,7 @@ const products = [
     contiene: "jugo Natural, yogurt, sandiwhc, frutas",
     imageDescription: "Desayuno frutal",
     category_id: 3,
-    categoryName: "Desayunos",
+    category: "Desayunos",
   },
   {
     id: 7,
@@ -97,7 +97,7 @@ const products = [
     contiene: "medialunas, jugo natural, alfajores",
     imageDescription: "Desayuno Argentino",
     category_id: 3,
-    categoryName: "Desayunos",
+    category: "Desayunos",
   },
   {
     id: 8,
@@ -111,7 +111,7 @@ const products = [
     contiene: "botella de vino, chocolates, copas",
     imageDescription: "wine and chocolate",
     category_id: 2,
-    categoryName: "Bebidas",
+    category: "Bebidas",
   },
   {
     id: 9,
@@ -125,7 +125,7 @@ const products = [
     contiene: "cafe, galletas, chcolate, taza personalizada",
     imageDescription: "Coffe and cookies",
     category_id: 3,
-    categoryName: "Desayunos",
+    category: "Desayunos",
   },
 ];
 const getFetch = new Promise((resolve, reject) => {

@@ -6,8 +6,6 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
 
 
 
-
-
 export default function ItemCount({ stock, initial, addItem }) {
   //el stock viene dado desde ItemListContainer.js donde uso esta funcion ItemCount
 

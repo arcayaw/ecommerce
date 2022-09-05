@@ -2,40 +2,42 @@ import React from 'react'
 import { useState } from 'react'
 import CartWidget from "./CartWidget"
 import logo from "../data/images/logo.png"
-import { TiThMenu } from "react-icons/ti"
+// import { TiThMenu } from "react-icons/ti"
 import { Transition } from "@headlessui/react";
+import { Link } from 'react-router-dom'
 
 
 
 
 const Navbar = () => {
 
-  const Links = [
-    { name: "HOME1", link: "/" },
-    { name: "HOME2", link: "/" },
-    { name: "HOME3", link: "/" },
-    { name: "HOME4", link: "/" },
-    { name: "HOME5", link: "/" },
-  ];
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-main-bg">
-      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="top-0 bg-main-bg">
+      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between h-16 text-slate-500">
           <div className="items-center text-2xl font-bold cursor-pointer">
-            <img src={logo} className="" alt="" style={{ width: "150px", height: '150px' }} />
+            <Link to='/'>
+              <img src={logo} className="" alt="" style={{ width: "150px", height: '150px' }} />
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="flex items-baseline ml-10 space-x-4">
               <ul className={`md:flex md:items-center md:pb-0 pb-4 absolute md:static bg-main-bg md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-12 transition-all duration-500 ease-in`}>
-                {
-                  Links.map((link) => (
-                    <li key={link.name} className='text-xl md:ml-8 md:my-0 my-7'>
-                      <a href={link.link} className='text-gray-800 duration-500 hover:text-secondaryColor'>{link.name}</a>
-                    </li>
-                  ))
-                }
+
+                <Link to='/category/Desayunos'>
+                  <li key='Desayunos' className='text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Desayunos</li>
+                </Link>
+                <Link to='/category/Kids'>
+                  <li key='Kids' className='text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Kids</li>
+                </Link>
+                <Link to='/category/Bebidas'>
+                  <li key='Bebidas' className='text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Bebidas</li>
+                </Link>
+                <Link to='/contacto'>
+                  <li key='Contacto' className='text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Contacto</li>
+                </Link>
                 <li className="text-4xl duration-500 cursor-pointer md:ml-8 md:my-0 my-7 hover:text-secondaryColor">
                   <CartWidget />
                 </li>
@@ -102,13 +104,18 @@ const Navbar = () => {
         {(ref) => (
           <div className=" md:hidden" id="mobile-menu">
             <div ref={ref} className="">
-              {
-                Links.map((link) => (
-                  <li key={link.name} className='block px-12 text-base text-xl font-medium rounded-md md:ml-8 md:my-0 my-7'>
-                    <a href={link.link} className='text-gray-800 duration-500 hover:text-secondaryColor'>{link.name}</a>
-                  </li>
-                ))
-              }
+              <Link to='/category/Desayunos'>
+                <li key='Desayunos' className='block px-12 text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Desayunos</li>
+              </Link>
+              <Link to='/category/Kids'>
+                <li key='Kids' className='block px-12 text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Kids</li>
+              </Link>
+              <Link to='/category/Bebidas'>
+                <li key='Bebidas' className='block px-12 text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Bebidas</li>
+              </Link>
+              <Link to='/contacto'>
+                <li key='Contacto' className='block px-12 text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Contacto</li>
+              </Link>
               <li className="justify-center block pb-5 pl-12 mb-3 text-4xl text-gray-800 duration-500 cursor-pointer md:ml-8 md:my-0 my-7 hover:text-secondaryColor">
                 <CartWidget />
               </li>
