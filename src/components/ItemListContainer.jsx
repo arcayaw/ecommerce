@@ -8,10 +8,9 @@ import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
 
-
-  //  esta devolviendo el valor de la categoria(este nombre se lo puse yo)
   const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState()
+  //REVISAR EL ESTADO INICIAL DE LOADING, LO DEJO EN BLANCO PORQUE ME CUELGA EL RENDER DEL HOME
   const { categoria } = useParams();
 
 
@@ -25,7 +24,7 @@ const ItemListContainer = () => {
         setLoading(false)
       }
     })
-  }, [categoria])
+  }, [categoria, setLoading])
 
 
   return (

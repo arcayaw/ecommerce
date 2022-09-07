@@ -1,16 +1,35 @@
 import React, { } from 'react'
 import { Link } from "react-router-dom"
+import { useCartContext } from "./CartContext";
 
 import ItemCount from './ItemCount'
 
 
 function ItemDetail({ product }) {
 
+  const { addToCart, cartList } = useCartContext();
 
+  const onAdd = (count) => {
+    function checkItem() {
+      const check = cartList.filter((sameItem) => sameItem.id === product.id);
+      if (check.length === 0) {
+        return undefined;
+      }
 
-  const onAdd = (counter) => {
-    console.log(`${counter} productos agregados al carrito`);
-  }
+      if (cartList.length !== 0) {
+        return check[0].count;
+      }
+    }
+    const checkStock = checkItem();
+    if (checkStock === undefined || checkStock + count <= product.stock) {
+      console.log(`Has agregado ${count} producto/s a tu carrito`);
+      addToCart({ ...product, count });
+    } else {
+      alert(
+        `No puedes agregar mas de ${product.stock} producto/s de este articulo`
+      );
+    }
+  };
 
   return (
     <>
@@ -24,18 +43,17 @@ function ItemDetail({ product }) {
           </div>
           <div className="text-white bg-slate-700 md:col-span-2">
             <h2 className='my-4 text-2xl'>{product.title}</h2>
-            <h2 className='my-4 text-2xl'>$ ${product.price}</h2>
+            <h2 className='my-4 text-2xl'> ${product.price}</h2>
             <p className='my-4'>Descripción: {product.description}</p>
             <p className='my-4'>Contiene: {product.contiene}</p>
             <div>
               <ItemCount className='' stock={product.stock} initial={1} addItem={onAdd} />
               <Link to="/cart">
-                <button className="className='p-2 px-4 py-2 mt-2 text-white rounded-full bg-secondary-dark-bg hover:bg-pink-700'">Finaliza compra </button>
+                <button className="className='p-2 px-4 py-2 mt-2 text-white rounded-full bg-secondary-dark-bg hover:bg-pink-700'">Finalizar compra </button>
               </Link>
             </div>
           </div>
         </div>
-
       </div>
     </>
   )

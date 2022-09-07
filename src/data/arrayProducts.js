@@ -18,7 +18,7 @@ const products = [
   {
     id: 2,
     title: "Box Rose",
-    stock: 2,
+    stock: 0,
     price: 3500,
     description: "Regala relax a esa persona que tanto quieres.",
     imageURL: "https://ibb.co/HPqpxX8",
@@ -132,7 +132,6 @@ const getFetch = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(products)
     reject(err => console.log(err))
-
   }, 2000);
 })
 

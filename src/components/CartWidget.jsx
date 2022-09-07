@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsCart } from "react-icons/bs"
 import ItemDetail from './ItemDetail';
+import { Link } from 'react-router-dom';
 
 
 const CartWidget = ({ onAdd }) => {
@@ -9,7 +10,9 @@ const CartWidget = ({ onAdd }) => {
 
   return (
     <div className='flex'>
-      <BsCart />
+      <Link to="/cart">
+        <BsCart />
+      </Link>
       <span className='text-m' >{onAdd}</span>
     </div>
   )
