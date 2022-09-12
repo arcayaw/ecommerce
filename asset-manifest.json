@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ecommerce/static/css/main.4b24ca5e.css",
-    "main.js": "/ecommerce/static/js/main.42d78d33.js",
+    "main.css": "/ecommerce/static/css/main.325b068b.css",
+    "main.js": "/ecommerce/static/js/main.6e3e2765.js",
     "static/media/nunchi-Helena-min.jpg": "/ecommerce/static/media/nunchi-Helena-min.74cc301e960b80fcd436.jpg",
     "static/media/boxMama.jpg": "/ecommerce/static/media/boxMama.8dd32a1b368669ef3990.jpg",
     "static/media/logo.png": "/ecommerce/static/media/logo.bc4933f3bd389cefcfd1.png",
     "index.html": "/ecommerce/index.html",
-    "main.4b24ca5e.css.map": "/ecommerce/static/css/main.4b24ca5e.css.map",
-    "main.42d78d33.js.map": "/ecommerce/static/js/main.42d78d33.js.map"
+    "main.325b068b.css.map": "/ecommerce/static/css/main.325b068b.css.map",
+    "main.6e3e2765.js.map": "/ecommerce/static/js/main.6e3e2765.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b24ca5e.css",
-    "static/js/main.42d78d33.js"
+    "static/css/main.325b068b.css",
+    "static/js/main.6e3e2765.js"
   ]
 }
