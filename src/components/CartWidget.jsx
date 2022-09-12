@@ -2,19 +2,47 @@ import React from 'react'
 import { BsCart } from "react-icons/bs"
 import ItemDetail from './ItemDetail';
 import { Link } from 'react-router-dom';
+import { useCartContext } from './CartContext';
 
 
-const CartWidget = ({ onAdd }) => {
+const CartWidget = () => {
 
-  console.log("productos agregados", onAdd);
+  const { totalCount, cartList } = useCartContext()
+
+  console.log("productos agregados", totalCount());
 
   return (
-    <div className='flex'>
-      <Link to="/cart">
-        <BsCart />
-      </Link>
-      <span className='text-m' >{onAdd}</span>
-    </div>
+    <>
+      {cartList.length === 0 ?
+        <Link to="/cart">
+          <BsCart />
+        </Link>
+        :
+        <div className='flex'>
+          <Link to="/cart">
+            <BsCart />
+          </Link>
+          <span className='text-2xl align-middle '>{totalCount()}</span>
+        </div>}
+
+    </>
+
+
   )
 }
 export default CartWidget
+
+
+
+
+/* 
+<div className='flex'>
+      <Link to="/cart">
+        <BsCart />
+      </Link>
+      <span className='text-m' >{ }</span>
+    </div>
+
+
+*/
+

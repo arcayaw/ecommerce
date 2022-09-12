@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <CartContextProvider>
-        <div className='bg-main-bg'>
+        <div className='min-h-screen bg-main-bg'>
           <Navbar />
           <Routes>
             <Route exact path="/" element={<ItemListContainer />} />
