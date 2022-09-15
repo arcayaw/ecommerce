@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
-import getFetch from "../data/arrayProducts"
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore"
 import { ItemList } from './ItemList';
 import Loader from "./Loader"
 import { useParams } from "react-router-dom";
@@ -9,22 +9,22 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
 
   const [products, setProducts] = useState([])
-  const [loading, setLoading] = useState()
-  //REVISAR EL ESTADO INICIAL DE LOADING, LO DEJO EN BLANCO PORQUE ME CUELGA EL RENDER DEL HOME
+  const [loading, setLoading] = useState(true)
   const { categoria } = useParams();
 
 
   useEffect(() => {
-    getFetch.then(products => {
-      if (!categoria) {
-        setProducts(products)
-      } else {
-        const nuevaLista = products.filter(product => product.category === categoria);
-        setProducts(nuevaLista)
-        setLoading(false)
-      }
-    })
-  }, [categoria, setLoading])
+    const db = getFirestore()
+
+    const queryCollection = collection(db, "items")
+    const queryCollectionFilter = categoria ? query(queryCollection, where("category", "==", categoria)) : queryCollection
+
+    getDocs(queryCollectionFilter)
+      .then(resp => setProducts(resp.docs.map(product => ({ id: product.id, ...product.data() }))))
+      .catch((err) => { console.log(err) })
+      .finally(() => setLoading(false))
+  }, [categoria])
+
 
 
   return (
@@ -40,4 +40,22 @@ const ItemListContainer = () => {
 
 export default ItemListContainer
 
+
+/* 
+  useEffect(() => {
+    
+    getFetch.then(products => {
+      if (!categoria) {
+        setProducts(products)
+      } else {
+        const nuevaLista = products.filter(product => product.category === categoria);
+        setProducts(nuevaLista)
+        setLoading(false)
+      }
+    })
+  }, [categoria, setLoading])
+
+
+
+*/
 

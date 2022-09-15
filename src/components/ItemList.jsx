@@ -2,6 +2,8 @@ import React from 'react'
 import { Item } from './Item'
 import { Link } from 'react-router-dom';
 
+
+
 export const ItemList = ({ products }) => {
   return (
 
@@ -15,6 +17,8 @@ export const ItemList = ({ products }) => {
           </Link>
         ))
       }
+
+      {/* {products.map(product => <Item key={product.id} data={product} />)} */}
     </div>
 
   )
