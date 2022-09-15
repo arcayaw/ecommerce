@@ -4,6 +4,7 @@ import { getFirestore, getDocs, collection, query, where } from "firebase/firest
 import { ItemList } from './ItemList';
 import Loader from "./Loader"
 import { useParams } from "react-router-dom";
+import { db } from '../firebase/firebase';
 
 
 const ItemListContainer = () => {
@@ -39,23 +40,3 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer
-
-
-/* 
-  useEffect(() => {
-    
-    getFetch.then(products => {
-      if (!categoria) {
-        setProducts(products)
-      } else {
-        const nuevaLista = products.filter(product => product.category === categoria);
-        setProducts(nuevaLista)
-        setLoading(false)
-      }
-    })
-  }, [categoria, setLoading])
-
-
-
-*/
-
