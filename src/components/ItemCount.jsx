@@ -1,12 +1,11 @@
-import React from 'react'
-import { useState } from 'react'
-import boxMama from "../data/images/boxMama.jpg"
+import React, { useState } from 'react'
+
 import Swal from 'sweetalert2'
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
 
 
 
-export default function ItemCount({ stock, initial, addItem }) {
+export default function ItemCount({ stock, initial, addItem, handleInput }) {
   //el stock viene dado desde ItemListContainer.js donde uso esta funcion ItemCount
 
   const [counter, setCounter] = useState(initial)
@@ -22,7 +21,9 @@ export default function ItemCount({ stock, initial, addItem }) {
     } else {
       setCounter(counter + 1)
     }
+    // handleInput();
   }
+
   const resta = () => {
     if (counter > 1) {
       setCounter(counter - 1)
@@ -30,6 +31,8 @@ export default function ItemCount({ stock, initial, addItem }) {
       counter = setCounter
     }
   }
+
+  // console.log(counter);
   return (
 
     <div className='text-center '>

@@ -2,14 +2,14 @@ import React from 'react'
 import { BsCart } from "react-icons/bs"
 import ItemDetail from './ItemDetail';
 import { Link } from 'react-router-dom';
-import { useCartContext } from './CartContext';
+import { useCartContext } from "../context/CartContext"
 
 
 const CartWidget = () => {
 
   const { totalCount, cartList } = useCartContext()
 
-  console.log("productos agregados", totalCount());
+  // console.log("productos agregados", totalCount());
 
   return (
     <>

@@ -6,7 +6,7 @@ import Cart from './components/Cart';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Contacto from './components/Contacto';
-import CartContextProvider from './components/CartContext';
+import CartContextProvider from "./context/CartContext.jsx"
 // import ErrorPage from './components/ErrorPage';
 
 function App() {

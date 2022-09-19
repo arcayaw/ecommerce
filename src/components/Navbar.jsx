@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import CartWidget from "./CartWidget"
 import logo from "../data/images/logo.png"
-// import { TiThMenu } from "react-icons/ti"
+
 import { Transition } from "@headlessui/react";
 import { Link } from 'react-router-dom'
 

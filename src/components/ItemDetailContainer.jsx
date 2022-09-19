@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
       .finally(() => setLoading(false))
   }, [itemId])
 
-  console.log('item', product);
+  // console.log('item', product);
 
   return (
     <div>

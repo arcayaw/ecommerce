@@ -1,11 +1,18 @@
-import React, { } from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom"
-import { useCartContext } from "./CartContext";
+import { useCartContext } from "../context/CartContext";
+
 
 import ItemCount from './ItemCount'
 
 
 function ItemDetail({ product }) {
+
+  const [inputType, setInputType] = useState("button");
+
+  const handleInput = () => {
+    setInputType("input");
+  };
 
   const { addToCart, cartList } = useCartContext();
 
@@ -51,6 +58,8 @@ function ItemDetail({ product }) {
               <Link to="/cart">
                 <button className="className='p-2 px-4 py-2 mt-2 text-white rounded-full bg-secondary-dark-bg hover:bg-pink-700'">Finalizar compra </button>
               </Link>
+
+
             </div>
           </div>
         </div>
