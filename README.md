@@ -7,7 +7,7 @@ Ecommerce de venta de regalos personalizados usando React JS y Tailwindcss
 Ver [DEMO](https://arcayaw.github.io/ecommerce/) de la app
 
 # Navegación
-! [gif](https://github.com/arcayaw/ecommerce/blob/master/src/gif.png)
+! [gif](https://github.com/arcayaw/ecommerce/blob/master/src/gif.gif)
 
 
 
