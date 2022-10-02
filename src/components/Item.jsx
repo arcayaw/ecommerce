@@ -13,7 +13,7 @@ export const Item = ({ data }) => {
   return (
     <div key={id} className="w-full max-w-sm mx-auto mb-5 bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
       <a >
-        {/*   para el zoom in en hover scale-100 hover:scale-125 ease-in duration-500 */}
+
         <img className="flex items-center justify-center p-2 mx-auto mt-5 rounded-t-lg " src={image} alt="product image" style={{ width: "300px", height: '350px' }} />
       </a>
       <div className="px-5 pb-5">

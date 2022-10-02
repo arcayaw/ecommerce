@@ -33,7 +33,7 @@ const ItemListContainer = () => {
       {
         loading ? <Loader />
           :
-          (<ItemList className="justify-between " products={products} />)
+          (<ItemList className="justify-center " products={products} />)
       }
     </div>
   )

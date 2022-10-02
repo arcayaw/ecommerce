@@ -20,34 +20,33 @@ const Cart = () => {
 
       {cartList.length === 0 ?
         <div className='min-h-full pb-12 mx-auto mb-12 text-center'>
-          <span className='block mx-auto my-4 text-2xl text-center '>Tu Carrito esta Vacio</span>
+          <span className='block py-20 mx-auto my-4 text-4xl text-center'>Tu Carrito esta Vacio</span>
           <Link to={"/"}>
             <button className='px-4 py-2 my-12 text-white rounded-full bg-secondary-dark-bg hover:bg-pink-700'>Ir a productos</button>
           </Link>
         </div>
         :
-        <div className="w-3/5 min-h-full px-10 mx-auto mb-8 bg-orange-300 border-b">
-          <div className=''>
-            <p className='inline-block px-10 py-6 mx-10 mx-auto space-x-6 align-middle '>Precio</p>
-            <p className='inline-block px-10 py-6 mx-10 mx-auto space-x-6 align-middle '>Total</p>
-          </div>
-          <ul className="inline-block align-middle border-b border-gray-200 divide-y divide-gray-200">
+        <div className="min-h-full p-4 mx-auto bg-orange-300 border-b lg:w-3/5 ">
+
+          <ul className="m-4 border-b border-gray-200 divide-y divide-gray-200 ">
             {cartList.map((product) => (
-              <li className="inline-block px-10 py-6 mx-10 mx-auto space-x-6 align-middle lg:flex ">
+              <li className="p-4 m-4 space-x-6 lg:flex sm:inline-block sm:w-full">
                 <Link key={product.id} to={`/detail/${product.id}`}>
                   <img
-                    className="flex-none object-cover object-center w-40 h-40 bg-gray-200 rounded-md sm:mb-3"
+                    className="w-40 h-40 mx-auto bg-gray-200 rounded-md "
                     src={product.image}
                     alt={`imagen ${product.title}`}></img>
                 </Link>
-                <p className="text-gray-900 ">{product.title}</p>
-                <p className="text-gray-900"> {product.count}Unidades</p>
-                <p className="text-gray-900">Precio: ${product.price}</p>
-                <p> Total: ${product.count * product.price}</p>
-                <button
-                  onClick={() => deleteItem(product.id)}
-                  className=""><FaTrashAlt />
-                </button>
+                <div className='my-auto lg:flex'>
+                  <p className="text-center lg:mx-3 ">{product.title}</p>
+                  <p className="text-center lg:mx-3"> {product.count} Uni.</p>
+                  <p className="text-center lg:mx-3">Precio: ${product.price}</p>
+                  <p className='text-center lg:mx-3 ' > Total: ${product.count * product.price}</p>
+                  <p className='text-center lg:mx-3'><button
+                    onClick={() => deleteItem(product.id)}
+                    className=""><FaTrashAlt className='' />
+                  </button></p>
+                </div>
               </li>
             ))}
           </ul>

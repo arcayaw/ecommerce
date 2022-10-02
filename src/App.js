@@ -5,9 +5,8 @@ import ItemListContainer from './components/ItemListContainer';
 import Cart from './components/Cart';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Contacto from './components/Contacto';
 import CartContextProvider from "./context/CartContext.jsx"
-// import ErrorPage from './components/ErrorPage';
+
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
             <Route path="/category/:categoria" element={<ItemListContainer />} />
             <Route path='id/:itemId' element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/contacto" element={<Contacto />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <Footer />

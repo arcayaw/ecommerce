@@ -35,9 +35,6 @@ const Navbar = () => {
                 <Link to='/category/Bebidas'>
                   <li key='Bebidas' className='text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Bebidas</li>
                 </Link>
-                <Link to='/contacto'>
-                  <li key='Contacto' className='text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Contacto</li>
-                </Link>
                 <li className="text-4xl duration-500 cursor-pointer md:ml-8 md:my-0 my-7 hover:text-secondaryColor">
                   <CartWidget />
                 </li>
@@ -112,9 +109,6 @@ const Navbar = () => {
               </Link>
               <Link to='/category/Bebidas'>
                 <li key='Bebidas' className='block px-12 text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Bebidas</li>
-              </Link>
-              <Link to='/contacto'>
-                <li key='Contacto' className='block px-12 text-xl md:ml-8 md:my-0 my-7 duration-600 hover:text-secondaryColor'>Contacto</li>
               </Link>
               <li className="justify-center block pb-5 pl-12 mb-3 text-4xl text-gray-800 duration-500 cursor-pointer md:ml-8 md:my-0 my-7 hover:text-secondaryColor">
                 <CartWidget />

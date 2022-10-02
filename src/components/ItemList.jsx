@@ -13,12 +13,11 @@ export const ItemList = ({ products }) => {
         products.map((product) => (
 
           <Link key={product.id} to={`/id/${product.id}`} >
-            <Item data={product} />
+            <Item className="justify-between" data={product} />
           </Link>
         ))
       }
 
-      {/* {products.map(product => <Item key={product.id} data={product} />)} */}
     </div>
 
   )
