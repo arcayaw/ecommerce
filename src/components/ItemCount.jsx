@@ -6,7 +6,7 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
 
 
 export default function ItemCount({ stock, initial, addItem, handleInput }) {
-  //el stock viene dado desde ItemListContainer.js donde uso esta funcion ItemCount
+
 
   const [counter, setCounter] = useState(initial)
 
@@ -32,7 +32,7 @@ export default function ItemCount({ stock, initial, addItem, handleInput }) {
     }
   }
 
-  // console.log(counter);
+
   return (
 
     <div className='text-center '>

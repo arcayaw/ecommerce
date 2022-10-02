@@ -13,14 +13,6 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true)
   const { itemId } = useParams()
 
-  // useEffect(() => {
-  //   getFetch.then(product => {
-  //     const newItemDetail = product.find(product => product.id === parseInt(itemId));
-  //     setProduct(newItemDetail)
-  //     setLoading(false);
-  //   })
-  // }, [itemId]);
-
   useEffect(() => {
     const db = getFirestore()
     const dbQuery = doc(db, "items", itemId)

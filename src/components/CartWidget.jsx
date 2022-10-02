@@ -9,7 +9,6 @@ const CartWidget = () => {
 
   const { totalCount, cartList } = useCartContext()
 
-  // console.log("productos agregados", totalCount());
 
   return (
     <>
@@ -33,16 +32,4 @@ const CartWidget = () => {
 export default CartWidget
 
 
-
-
-/* 
-<div className='flex'>
-      <Link to="/cart">
-        <BsCart />
-      </Link>
-      <span className='text-m' >{ }</span>
-    </div>
-
-
-*/
 

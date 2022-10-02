@@ -6,7 +6,7 @@ import Form from './Form';
 
 const Cart = () => {
   const { cartList, deleteItem, totalPrice, totalCount, deleteCart } = useCartContext();
-  console.log("cartList desde cart", cartList);
+
 
 
 
